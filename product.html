@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Details | Sweet Delights</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+</head>
+<body class="font-sans bg-gray-50">
+
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-30">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <!-- Back button -->
+      <a href="index.html" class="text-2xl text-amber-600 hover:text-amber-700">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+      <!-- Brand -->
+      <h1 class="text-xl font-bold text-gray-800 font-[cursive]">Sweet Delights</h1>
+    </div>
+    <div class="flex items-center space-x-4">
+      <!-- Profile or Login Link -->
+<div id="profile-container" class="absolute top-6 right-6">
+  <a href="auth.html" id="login-link" class="text-amber-600 hover:text-amber-500 font-medium">Login / Register</a>
+  <a href="#" id="profile-icon" class="hidden text-amber-600 hover:text-amber-500 text-xl">
+    <i class="fas fa-user-circle"></i>
+  </a>
+</div>
+      <!-- Cart icon -->
+      <div class="relative">
+        <button id="cart-btn" class="text-gray-700 hover:text-amber-600" aria-label="Open cart">
+          <i class="fas fa-shopping-cart text-xl"></i>
+        </button>
+        <span id="cart-count" class="cart-count hidden">0</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="fixed top-0 right-0 w-80 max-w-full bg-white shadow-lg h-full p-6 overflow-y-auto transform translate-x-full transition-transform z-50">
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-xl font-bold">Your Cart</h2>
+    <button id="close-cart" class="text-gray-600 hover:text-gray-800 text-2xl">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- Cart Items -->
+  <div id="cart-items" class="space-y-4">
+    <!-- Items will be dynamically inserted here by JS -->
+  </div>
+
+  <!-- Subtotal -->
+  <div class="mt-6 border-t pt-4">
+    <div class="flex justify-between text-gray-700 font-medium mb-2">
+      <span>Subtotal</span>
+      <span id="cart-subtotal">$0.00</span>
+    </div>
+    <div class="flex justify-between text-gray-700 font-medium mb-2">
+      <span>Shipping</span>
+      <span>Calculated at checkout</span>
+    </div>
+    <div class="flex justify-between text-lg font-bold">
+      <span>Total</span>
+      <span id="cart-total">$0.00</span>
+    </div>
+  </div>
+
+  <!-- Checkout Button -->
+  <button onclick="window.location.href='checkout.html'" class="w-full mt-6 bg-amber-600 text-white py-2 rounded hover:bg-amber-700 transition">Proceed to Checkout</button>
+  <a href="index.html" class="block text-center mt-4 text-gray-600 hover:text-amber-600">Continue Shopping</a>
+</div>
+
+<!-- Cart Overlay -->
+<div id="cart-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+
+
+  <!-- Product Detail -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-6 rounded shadow">
+        <img id="product-image" src="" alt="Product Image" class="w-full h-96 object-cover rounded">
+        <div>
+          <h1 id="product-name" class="text-3xl font-bold mb-4"></h1>
+          <p id="product-description" class="text-gray-600 mb-4"></p>
+          <p id="product-price" class="text-xl font-semibold mb-6"></p>
+
+          <div class="flex items-center mb-6">
+            <button id="decreaseQty" class="px-3 py-1 bg-gray-300 rounded-l">-</button>
+            <input type="text" id="quantity" value="1" readonly class="w-12 text-center border-t border-b border-gray-300">
+            <button id="increaseQty" class="px-3 py-1 bg-gray-300 rounded-r">+</button>
+          </div>
+
+          <button id="addToCart" class="bg-amber-600 text-white py-2 px-6 rounded hover:bg-amber-700 transition">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#4b2c20] text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-300">© 2025 Sweet Delights. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="product.js"></script>
+  <script src="auth.js"></script>
+
+</body>
+</html>

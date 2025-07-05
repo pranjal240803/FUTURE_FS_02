@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout | Sweet Delights</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#fff7f2]">
+
+  
+  <header class="bg-white shadow-sm sticky top-0 z-30">
+   
+  </header>
+
+  
+  <section id="checkout" class="py-16">
+    <div class="container mx-auto px-4 max-w-lg bg-white p-8 rounded-xl shadow-md">
+      <h2 class="font-cursive text-4xl text-[#b88653] text-center mb-8">Checkout</h2>
+
+      <form id="checkout-form" novalidate>
+        <input type="text" id="name" placeholder="Your Name">
+        <span id="name-error" class="form-error hidden">Name is required.</span>
+
+        <input type="email" id="email" placeholder="Email Address">
+        <span id="email-error" class="form-error hidden">Please enter a valid email.</span>
+
+        <textarea id="address" placeholder="Shipping Address"></textarea>
+        <span id="address-error" class="form-error hidden">Address is required.</span>
+
+        <input type="text" id="card" placeholder="Card Number (16 digits)" maxlength="16">
+        <span id="card-error" class="form-error hidden">Please enter a valid 16-digit card number.</span>
+
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

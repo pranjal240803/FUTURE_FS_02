@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sweet Delights | Homemade Bakery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+
+</head>
+<body id="home" class="font-sans bg-gray-50">
+
+
+    <!-- header section code -->
+<header class="bg-white shadow-sm sticky top-0 z-30">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+        <i class="fas fa-heart text-2xl text-amber-600 mr-2"></i>
+            <h1 class="text-xl font-bold text-gray-800">Sweet Delights</h1>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+            <a href="#home" class="text-gray-700 hover:text-amber-600 font-medium">Home</a>
+            <a href="#products" class="text-gray-700 hover:text-amber-600 font-medium">Products</a>
+            <a href="#about" class="text-gray-700 hover:text-amber-600 font-medium">About Us</a>
+            <a href="#testimonials" class="text-gray-700 hover:text-amber-600 font-medium">Testimonials</a>
+            <a href="contact.html" class="text-gray-700 hover:text-amber-600 font-medium">Contact</a>
+
+         <div id="profile-container"class="flex items-center space-x-2">
+              <a href="auth.html" id="login-link" class="text-gray-700 hover:text-amber-500 font-medium">Login / Register</a>
+              <a href="#" id="profile-icon" class="hidden text-amber-600 hover:text-amber-500 text-xl">
+              <i class="fas fa-user-circle"></i>
+            </a>
+         </div>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <div class="relative">
+                <button id="cart-btn" class="text-gray-700 hover:text-amber-600" aria-label="Open cart">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                </button>
+                <span id="cart-count" class="cart-count hidden">0</span>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div id="mobile-menu" class="mobile-menu">
+  <button id="close-menu" class="close-button">&times;</button>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#about">About Us</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="contact.html">Contact</a>
+  <div id="profile-container">
+              <a href="auth.html" id="login-link" class="text-gray-700 hover:text-amber-500 font-medium">Login / Register</a>
+              <a href="#" id="profile-icon" class="hidden text-amber-600 hover:text-amber-500 text-xl">
+              <i class="fas fa-user-circle"></i>
+            </a>
+         </div>
+       </div>
+      </div>
+<div id="menu-overlay" class="hidden "></div>
+
+<section class="hero flex items-center justify-center text-center text-white relative" aria-label="Bakery Hero Section" role="region" aria-labelledby="hero-heading">
+    <div class="container mx-auto px-4 relative z-10 hero-content bg-white/0 p-8 rounded shadow">
+        <h1 id="hero-heading" class="text-4xl md:text-6xl font-bold mb-6" style="font-family: 'Playfair Display', serif;">Homemade Bakery Delights</h1>
+        <p class="text-xl md:text-2xl mb-8">Freshly baked with love, just like grandma used to make</p>
+        <a href="#products" class="button">Shop Now</a>
+    </div>
+</section>
+
+
+<section id="products" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Featured Treats</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Handcrafted with the finest ingredients and baked to perfection</p>
+    </div>
+
+    <!-- Our Featured Treats -->
+
+<div class="featured-treats grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+  <a href="product.html?id=25" class="block text-center">
+    <img src="images/p25.jpg" alt="Strawberry Delight" class="w-full h-64 object-cover rounded-lg mb-2">
+    <h3 class="text-lg font-semibold text-[#4e3b3b]">Strawberry Delight</h3>
+  </a>
+
+  <a href="product.html?id=26" class="block text-center">
+    <img src="images/p26.jpg" alt="Honey Almond Tart" class="w-full h-64 object-cover rounded-lg mb-2">
+    <h3 class="text-lg font-semibold text-[#4e3b3b]">Honey Almond Tart</h3>
+  </a>
+
+  <a href="product.html?id=27" class="block text-center">
+    <img src="images/p27.jpg" alt="Mini Lemon Cheesecake" class="w-full h-64 object-cover rounded-lg mb-2">
+    <h3 class="text-lg font-semibold text-[#4e3b3b]">Mini Lemon Cheesecake</h3>
+  </a>
+
+</div>
+
+
+    <!-- Category Filter -->
+     <div class="text-center mb-12">
+  <h2 class="text-3xl font-bold text-gray-800 mb-4">Category</h2>
+  <div class="flex flex-wrap justify-center gap-4">
+      <button class="category-btn bg-amber-600 text-white px-4 py-2 rounded-full" data-category="all">All</button>
+      <button class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full" data-category="cakes">Cakes</button>
+      <button class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full" data-category="cookies">Cookies</button>
+      <button class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full" data-category="breads">Breads</button>
+      <button class="category-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full" data-category="pastries">Pastries</button>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- ======= Cakes ======= -->
+  
+  <!-- ======= Cakes ======= -->
+<div class="product-card" data-category="cakes">
+  <img src="images/p1.jpg" alt="Chocolate Cake">
+  <h3>Chocolate Cake</h3>
+  <p>Rich and moist chocolate cake.</p>
+  <p>₹699</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=1" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="1" data-name="Chocolate Cake" data-price="699">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="cakes">
+  <img src="images/p2.jpg" alt="Vanilla Cake">
+  <h3>Vanilla Cake</h3>
+  <p>Light and fluffy vanilla cake.</p>
+  <p>₹599</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=2" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="2" data-name="Vanilla Cake" data-price="599">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="cakes">
+  <img src="images/p3.jpg" alt="Red Velvet Cake">
+  <h3>Red Velvet Cake</h3>
+  <p>Classic red velvet with cream cheese frosting.</p>
+  <p>₹749</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=3" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="3" data-name="Red Velvet Cake" data-price="749">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="cakes">
+  <img src="images/p4.jpg" alt="Strawberry Cake">
+  <h3>Strawberry Cake</h3>
+  <p>Fresh strawberry layered cake.</p>
+  <p>₹899</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=4" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="4" data-name="Strawberry Cake" data-price="899">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="cakes">
+  <img src="images/p5.jpg" alt="Black Forest Cake">
+  <h3>Black Forest Cake</h3>
+  <p>Chocolate and cherry delight.</p>
+  <p>₹799</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=5" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="5" data-name="Black Forest Cake" data-price="799">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="cakes">
+  <img src="images/p6.jpg" alt="Carrot Cake">
+  <h3>Carrot Cake</h3>
+  <p>Moist carrot cake with creamy frosting.</p>
+  <p>₹599</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=6" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="6" data-name="Carrot Cake" data-price="599">Add to Cart</button>
+  </div>
+</div>
+
+<!-- ======= Cookies ======= -->
+<div class="product-card" data-category="cookies">
+  <img src="images/p7.jpg" alt="Chocolate Chip Cookie">
+  <h3>Chocolate Chip Cookie</h3>
+  <p>Classic chewy chocolate chip cookies.</p>
+  <p>₹79</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=7" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="7" data-name="Chocolate Chip Cookie" data-price="79">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="cookies">
+  <img src="images/p8.jpg" alt="Oatmeal Raisin Cookie">
+  <h3>Oatmeal Raisin Cookie</h3>
+  <p>Chewy and wholesome oatmeal raisin.</p>
+  <p>₹89</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=8" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="8" data-name="Oatmeal Raisin Cookie" data-price="89">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="cookies">
+  <img src="images/p9.jpg" alt="Peanut Butter Cookie">
+  <h3>Peanut Butter Cookie</h3>
+  <p>Rich and soft peanut butter cookies.</p>
+  <p>₹75</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=9" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="9" data-name="Peanut Butter Cookie" data-price="75">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="cookies">
+  <img src="images/p10.jpg" alt="Macadamia Nut Cookie">
+  <h3>Macadamia Nut Cookie</h3>
+  <p>Buttery cookie with crunchy macadamia nuts.</p>
+  <p>₹99</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=10" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="10" data-name="Macadamia Nut Cookie" data-price="99">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="cookies">
+  <img src="images/p11.jpg" alt="Double Chocolate Cookie">
+  <h3>Double Chocolate Cookie</h3>
+  <p>Intensely chocolate, soft and fudgy.</p>
+  <p>₹99</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=11" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="11" data-name="Double Chocolate Cookie" data-price="99">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="cookies">
+  <img src="images/p12.jpg" alt="Sugar Cookie">
+  <h3>Sugar Cookie</h3>
+  <p>Soft, buttery sugar cookie with sprinkles.</p>
+  <p>₹59</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=12" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="12" data-name="Sugar Cookie" data-price="59">Add to Cart</button>
+  </div>
+</div>
+
+<!-- ======= Breads ======= -->
+<div class="product-card" data-category="breads">
+  <img src="images/p13.jpg" alt="Sourdough Bread">
+  <h3>Sourdough Bread</h3>
+  <p>Artisan crusty sourdough loaf.</p>
+  <p>₹249</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=13" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="13" data-name="Sourdough Bread" data-price="249">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="breads">
+  <img src="images/p14.jpg" alt="Baguette">
+  <h3>Baguette</h3>
+  <p>French style crisp baguette.</p>
+  <p>₹149</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=14" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="14" data-name="Baguette" data-price="149">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="breads">
+  <img src="images/p15.jpg" alt="Whole Wheat Bread">
+  <h3>Whole Wheat Bread</h3>
+  <p>Healthy, hearty whole wheat loaf.</p>
+  <p>₹199</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=15" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="15" data-name="Whole Wheat Bread" data-price="199">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="breads">
+  <img src="images/p16.jpg" alt="Brioche">
+  <h3>Brioche</h3>
+  <p>Soft, buttery French brioche.</p>
+  <p>₹299</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=16" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="16" data-name="Brioche" data-price="299">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="breads">
+  <img src="images/p17.jpg" alt="Ciabatta">
+  <h3>Ciabatta</h3>
+  <p>Italian rustic bread with airy crumb.</p>
+  <p>₹249</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=17" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="17" data-name="Ciabatta" data-price="249">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="breads">
+  <img src="images/p18.jpg" alt="Focaccia">
+  <h3>Focaccia</h3>
+  <p>Olive oil infused Italian focaccia.</p>
+  <p>₹299</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=18" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="18" data-name="Focaccia" data-price="299">Add to Cart</button>
+  </div>
+</div>
+
+<!-- ======= Pastries ======= -->
+<div class="product-card" data-category="pastries">
+  <img src="images/p19.jpg" alt="Croissant">
+  <h3>Croissant</h3>
+  <p>Flaky, buttery French croissant.</p>
+  <p>₹129</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=19" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="19" data-name="Croissant" data-price="129">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="pastries">
+  <img src="images/p20.jpg" alt="Danish">
+  <h3>Danish</h3>
+  <p>Sweet pastry with fruit filling.</p>
+  <p>₹149</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=20" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="20" data-name="Danish" data-price="149">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="pastries">
+  <img src="images/p21.jpg" alt="Eclair">
+  <h3>Eclair</h3>
+  <p>Light choux pastry with cream filling.</p>
+  <p>₹169</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=21" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="21" data-name="Eclair" data-price="169">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="pastries">
+  <img src="images/p22.jpg" alt="Fruit Tart">
+  <h3>Fruit Tart</h3>
+  <p>Fresh seasonal fruit on creamy base.</p>
+  <p>₹249</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=22" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="22" data-name="Fruit Tart" data-price="249">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="pastries">
+  <img src="images/p23.jpg" alt="Cinnamon Roll">
+  <h3>Cinnamon Roll</h3>
+  <p>Sweet cinnamon swirl with icing.</p>
+  <p>₹149</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=23" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="23" data-name="Cinnamon Roll" data-price="149">Add to Cart</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="pastries">
+  <img src="images/p24.jpg" alt="Baklava">
+  <h3>Baklava</h3>
+  <p>Layered filo pastry with nuts and honey.</p>
+  <p>₹199</p>
+  <div class="flex gap-2">
+    <a href="product.html?id=24" class="btn-action">View Details</a>
+    <button class="btn-action add-to-cart" data-id="24" data-name="Baklava" data-price="199">Add to Cart</button>
+  </div>
+</div>
+</section>
+
+
+
+<!-- Mobile Menu -->
+  <div class="mobile-menu fixed top-0 right-0 w-64 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 p-6">
+    <button id="close-menu" class="text-gray-600 hover:text-amber-600 mb-6">
+      <i class="fas fa-times text-2xl"></i>
+    </button>
+    <nav class="flex flex-col space-y-4">
+      <a href="#" class="text-gray-700 hover:text-amber-600 font-medium">Home</a>
+      <a href="#products" class="text-gray-700 hover:text-amber-600 font-medium">Products</a>
+      <a href="#about" class="text-gray-700 hover:text-amber-600 font-medium">About Us</a>
+      <a href="#testimonials" class="text-gray-700 hover:text-amber-600 font-medium">Testimonials</a>
+      <a href="contact.html" class="text-gray-700 hover:text-amber-600 font-medium">Contact </a>
+    </nav>
+  </div>
+  <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+  <!-- Shopping Cart Sidebar -->
+  <div id="cart-sidebar" class="fixed top-0 right-0 w-full sm:w-96 h-full bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 overflow-y-auto">
+  <div class="p-6">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-xl font-bold text-gray-800">Your Cart</h3>
+      <button id="close-cart" class="text-gray-600 hover:text-amber-600">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+    <div id="cart-items" class="space-y-4 mb-6">
+      <p class="text-gray-500 text-center py-8">Your cart is empty</p>
+    </div>
+    <div class="border-t border-gray-200 pt-4 mb-6">
+      <div class="flex justify-between mb-2">
+        <span class="text-gray-600">Subtotal</span>
+        <span id="cart-subtotal" class="font-bold">$0.00</span>
+      </div>
+      <div class="flex justify-between mb-2">
+        <span class="text-gray-600">Shipping</span>
+        <span class="font-bold">Calculated at checkout</span>
+      </div>
+      <div class="flex justify-between text-lg font-bold mt-4">
+        <span>Total</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button id="checkout-btn" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 mb-4">
+        Proceed to Checkout
+      </button>
+      <button id="continue-shopping" class="block w-full text-center text-gray-600 hover:text-amber-600 transition duration-300">
+        Continue Shopping
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Cart overlay -->
+<div id="cart-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+  <!-- Success Toast -->
+  <div id="success-toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center transform translate-y-16 opacity-0 transition-all duration-300 z-50">
+    <i class="fas fa-check-circle mr-3"></i>
+    <span id="toast-message">Item added to cart!</span>
+  </div>
+
+
+<!-- ===================== ABOUT SECTION ===================== -->
+<section id="about" class="relative py-16 bg-[#fff7f2] flex flex-col md:flex-row items-center justify-center px-6 md:px-16 overflow-hidden">
+  <!-- Background overlay -->
+  <div id="about-bg" class="absolute inset-0 bg-center bg-cover transition-opacity duration-1000 opacity-100"></div>
+
+  <!-- Content wrapper with slight background to improve text readability -->
+  <div class="relative z-10 bg-white/70 p-8 rounded-2xl shadow-lg md:w-2/3 mx-auto text-center">
+    <h2 class="text-4xl font-playfair font-bold text-[#ff6f61] mb-4">About Us</h2>
+    <p class="text-lg text-gray-700 mb-4">
+      At Sweet Delights, baking is not just a craft — it's our passion. From the freshest breads to the most decadent cakes, we blend tradition with creativity to bring joy in every bite.
+    </p>
+    <p class="text-lg text-gray-700 mb-6">
+      Using only high-quality ingredients and time-honored techniques, our creations are made to make every moment special. Whether it's a birthday, a wedding, or your morning coffee, we have something to make your day sweeter.
+    </p>
+    <a href="contact.html" class="inline-block bg-[#ff6f61] text-white px-6 py-3 rounded-full shadow hover:bg-[#e85c50] transition">Contact Us</a>
+  </div>
+</section>
+
+
+
+<!-- ===================== TESTIMONIALS SECTION ===================== -->
+<section id="testimonials" class="py-16 bg-white flex justify-center">
+  <div class="testimonial-container relative w-full max-w-lg perspective cursor-pointer">
+    <div class="testimonial-card testimonial-front">
+      <h2 class="testimonial-heading">Testimonial</h2>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="testimonial-text">"Absolutely delicious cakes! Perfect for every occasion. Highly recommend!"</p>
+      <div class="author">— Sonit❤️</div>
+    </div>
+    <div class="testimonial-card testimonial-back">
+      <h2 class="testimonial-heading">Testimonial</h2>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p class="testimonial-text">"The breads are fresh and soft, and the pastries are divine."</p>
+      <div class="author">— Rakshit❤️</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-[#4b2c20] text-white py-12 relative z-10" >
+  <div class="container mx-auto px-4 max-w-7xl grid grid-cols-1 md:grid-cols-4 gap-8 text-left">
+    <div>
+      <h3 class="text-2xl font-bold mb-4">Sweet Delights</h3>
+      <p class="text-sm text-gray-300">
+        At Sweet Delights, baking is not just a craft — it's our passion. From the freshest breads to the most decadent cakes, we blend tradition with creativity to bring joy in every bite.
+      </p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Pages</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="text-gray-300 hover:text-amber-500 transition">Home</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-amber-500 transition">Products</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-amber-500 transition">About Us</a></li>
+        <li><a href="#testimonial" class="text-gray-300 hover:text-amber-500 transition">Testimonial</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="text-gray-300 hover:text-amber-500 transition">Facebook</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-amber-500 transition">Instagram</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-amber-500 transition">Pinterest</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-amber-500 transition">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Contact</h4>
+      <ul class="space-y-2 text-sm">
+        <li class="text-gray-300">Ganjam, Odisha, India</li>
+        <li class="text-gray-300">+91 7789961218</li>
+        <li class="text-gray-300">pranjal.dipa24@gmail.com</li>
+        <li class="text-gray-300">www.sweetdelight.com</li>
+      </ul>
+    </div>
+  </div>
+    <div class="bottom-text border-t border-gray-600 pt-4 text-gray-300">
+  All copyrights are reserved by Sweet Delights. &copy; 2025
+</div>
+
+</div>
+</footer>
+
+
+
+
+  <!-- Script -->
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+  
+
+<div id="toast" class="fixed bottom-4 right-4 bg-amber-600 text-white px-4 py-2 rounded shadow hidden"></div>
+
+</body>
+</html>
